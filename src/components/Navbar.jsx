@@ -33,7 +33,8 @@ const Navbar = () => {
           <Text ml={2}>Help Center</Text>
         </Box>
         <Box display="flex" alignItems="center">
-          <Text>Dark Mode</Text>
+          <Icon as={FaMoon} boxSize={6} />
+          <Text ml={2}>Dark Mode</Text>
           <Switch colorScheme="teal" size="lg" ml={2} />
         </Box>
       </VStack>
