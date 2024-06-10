@@ -1,4 +1,5 @@
-import { Box, SimpleGrid, GridItem, Text } from "@chakra-ui/react";
+import { Box, SimpleGrid, GridItem, Text, IconButton } from "@chakra-ui/react";
+import { FaArrowRight, FaFilter, FaSyncAlt } from "react-icons/fa";
 import Navbar from "../components/Navbar";
 import SearchBar from "../components/SearchBar";
 import UserProfile from "../components/UserProfile";
@@ -25,14 +26,57 @@ const Dashboard = () => {
           </SimpleGrid>
           <SimpleGrid columns={2} spacing={4} mb={4}>
             <GridItem colSpan={2}>
+              <Box display="flex" justifyContent="space-between" alignItems="center">
+                <Text fontSize="lg">Sales Throughout Time</Text>
+                <Box>
+                  <IconButton icon={<FaFilter />} size="sm" aria-label="Filter" mr={2} />
+                  <IconButton icon={<FaSyncAlt />} size="sm" aria-label="Refresh" />
+                </Box>
+              </Box>
               <CustomLineChart />
             </GridItem>
-            <CustomBarChart />
-            <CustomPieChart />
+            <GridItem>
+              <Box display="flex" justifyContent="space-between" alignItems="center">
+                <Text fontSize="lg">Total Salesforce</Text>
+                <Box>
+                  <IconButton icon={<FaFilter />} size="sm" aria-label="Filter" mr={2} />
+                  <IconButton icon={<FaSyncAlt />} size="sm" aria-label="Refresh" />
+                </Box>
+              </Box>
+              <CustomBarChart />
+            </GridItem>
+            <GridItem>
+              <Box display="flex" justifyContent="space-between" alignItems="center">
+                <Text fontSize="lg">Contributing Branches</Text>
+                <Box>
+                  <IconButton icon={<FaFilter />} size="sm" aria-label="Filter" mr={2} />
+                  <IconButton icon={<FaSyncAlt />} size="sm" aria-label="Refresh" />
+                </Box>
+              </Box>
+              <CustomPieChart />
+            </GridItem>
           </SimpleGrid>
           <SimpleGrid columns={2} spacing={4}>
-            <CustomDonutChart />
-            <CustomDonutChart />
+            <GridItem>
+              <Box display="flex" justifyContent="space-between" alignItems="center">
+                <Text fontSize="lg">Active Salesforce</Text>
+                <Box>
+                  <IconButton icon={<FaFilter />} size="sm" aria-label="Filter" mr={2} />
+                  <IconButton icon={<FaSyncAlt />} size="sm" aria-label="Refresh" />
+                </Box>
+              </Box>
+              <CustomDonutChart />
+            </GridItem>
+            <GridItem>
+              <Box display="flex" justifyContent="space-between" alignItems="center">
+                <Text fontSize="lg">Active Branch</Text>
+                <Box>
+                  <IconButton icon={<FaFilter />} size="sm" aria-label="Filter" mr={2} />
+                  <IconButton icon={<FaSyncAlt />} size="sm" aria-label="Refresh" />
+                </Box>
+              </Box>
+              <CustomDonutChart />
+            </GridItem>
           </SimpleGrid>
         </Box>
       </Box>

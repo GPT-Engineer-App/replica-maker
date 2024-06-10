@@ -8,33 +8,33 @@ const Navbar = () => {
         <Box>
           <Text fontSize="2xl" fontWeight="bold">Bang Jamin</Text>
         </Box>
-        <Box>
+        <Box display="flex" alignItems="center">
           <Icon as={FaTachometerAlt} boxSize={6} />
           <Text ml={2}>Dashboard</Text>
         </Box>
-        <Box>
+        <Box display="flex" alignItems="center">
           <Icon as={FaDatabase} boxSize={6} />
           <Text ml={2}>Master Data</Text>
         </Box>
-        <Box>
+        <Box display="flex" alignItems="center">
           <Icon as={FaTree} boxSize={6} />
           <Text ml={2}>Agent Tree</Text>
         </Box>
-        <Box>
+        <Box display="flex" alignItems="center">
           <Icon as={FaMoneyBill} boxSize={6} />
           <Text ml={2}>My Income</Text>
         </Box>
-        <Box>
+        <Box display="flex" alignItems="center">
           <Icon as={FaCog} boxSize={6} />
           <Text ml={2}>Settings</Text>
         </Box>
-        <Box>
+        <Box display="flex" alignItems="center">
           <Icon as={FaQuestionCircle} boxSize={6} />
           <Text ml={2}>Help Center</Text>
         </Box>
-        <Box>
+        <Box display="flex" alignItems="center">
           <Text>Dark Mode</Text>
-          <Switch colorScheme="teal" size="lg" />
+          <Switch colorScheme="teal" size="lg" ml={2} />
         </Box>
       </VStack>
     </Box>
